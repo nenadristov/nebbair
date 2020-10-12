@@ -1,0 +1,100 @@
+﻿@model NebbAir.Models.Patnici
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h3>Details</h3>
+<p>Full details about the passenger <b>@Html.DisplayFor(model => model.Ime) @Html.DisplayFor(model => model.Prezime)</b>  flight to  <b>@Html.DisplayFor(model => model.Destination)</b></p>
+<div class="akcii-details">
+    <a asp-action="Index">Back to Manifest</a> |
+    <a asp-action="Edit" asp-route-id="@Model.PatnikID">Edit</a> |
+    <a asp-action="Delete" asp-route-id="@Model.PatnikID">Delete</a>
+</div>
+<div>
+
+    <hr />
+    <dl class="row">
+        <div class="col-sm-6">
+            <h5>Passenger Information</h5>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Ime)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Ime)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Prezime)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Prezime)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.DataNaRagjanje)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DataNaRagjanje)
+            </dd>
+        </div>
+
+        <div class="col-sm-6">
+            <h5>Flight Information</h5>
+            <dt class="col-sm-8">
+                @Html.DisplayNameFor(model => model.PassporNo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PassporNo)
+            </dd>
+            <dt class="col-sm-8">
+                @Html.DisplayNameFor(model => model.FlightNo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FlightNo)
+            </dd>
+            <dt class="col-sm-8">
+                @Html.DisplayNameFor(model => model.Origin)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Origin)
+            </dd>
+            <dt class="col-sm-8">
+                @Html.DisplayNameFor(model => model.Destination)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Destination)
+            </dd>
+            <dt class="col-sm-8">
+                @Html.DisplayNameFor(model => model.Departure)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Departure)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Return)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Return)
+            </dd>
+
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.CarryOn)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CarryOn)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Trolley)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Trolley)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.CheckIn)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CheckIn)
+            </dd>
+
+        </div>
+    </dl>
+</div>
