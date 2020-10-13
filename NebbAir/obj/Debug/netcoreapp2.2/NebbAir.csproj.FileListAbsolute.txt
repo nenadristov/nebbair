@@ -39,3 +39,4 @@ C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\Patnicis\Details.cshtml.g.cs
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\Patnicis\Edit.cshtml.g.cs
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\Patnicis\Index.cshtml.g.cs
+C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\Patnicis\GetPasos.cshtml.g.cs

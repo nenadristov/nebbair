@@ -150,22 +150,14 @@ namespace NebbAir.Controllers
             return _context.Patnici.Any(e => e.PatnikID == id);
         }
 
-        public async Task<IActionResult> GetPasos(string Pasos)
+        [Route("GetPasos/{Pasos}")]
+        [HttpGet]
+        public ActionResult GetPasos(string Pasos)
         {
-            if (Pasos == null)
-            {
-                return NotFound();
-            }
-
-            var patnici = await _context.Patnici
-                .FirstOrDefaultAsync(m => m.PassporNo == Pasos);
-            if (patnici == null)
-            {
-                return NotFound();
-            }
-
-            return View(patnici);
+            return View("hello");
         }
+
+        [Route("GetFlight/{Flight}")]
         public async Task<IActionResult> GetFLight(string Flight)
         {
             if (Flight == null)

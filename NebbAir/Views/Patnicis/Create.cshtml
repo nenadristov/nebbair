@@ -14,7 +14,7 @@
 <hr />
 <div class="row">
     <div class="col-md-8">
-        <form asp-action="Create" onsubmit="Proverka()">
+        <form asp-action="Create" onsubmit=" return Proverka()">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <h4>Passenger Information</h4>
             <div class="row">
@@ -39,7 +39,7 @@
 
                 <div class="form-group col-sm-6">
                     <label asp-for="PassporNo" class="control-label">Passport Number<span style="color: red;"> * </span></label>
-                    <input asp-for="PassporNo" class="form-control" />
+                    <input asp-for="PassporNo" class="form-control" title="Example passport number : A1234567"/>
                     <span asp-validation-for="PassporNo" class="text-danger"></span>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group col-sm-6">
                     <label asp-for="FlightNo" class="control-label">Flight Number<span style="color: red;"> * </span></label>
-                    <input asp-for="FlightNo" class="form-control" />
+                    <input asp-for="FlightNo" class="form-control" title="Input four digit flight number" />
                     <span asp-validation-for="FlightNo" class="text-danger"></span>
                 </div>
             </div>
@@ -124,11 +124,11 @@
             var input = document.getElementById("PassporNo").value;
             var regex = new RegExp("^[A-Z0-9]+$")
             if (regex.test(input) && input.length === 8) {
-                console.log("Rabote");
+                //console.log("Rabote");
                 $("input#PassporNo").css("border-color", "green")
             }
             else {
-                console.log("asd");
+                //console.log("asd");
                 $("input#PassporNo").css("border-color", "red")
             }
             //console.log(regex.test(input));
@@ -140,35 +140,45 @@
             var input = document.getElementById("FlightNo").value;
             var regex = new RegExp("^[0-9]+$")
             if (regex.test(input) && input.length === 4) {
-                console.log("Rabote");
+                //console.log("Rabote");
                 $("input#FlightNo").css("border-color", "green")
             }
             else {
-                console.log("asd");
+                //console.log("asd");
                 $("input#FlightNo").css("border-color", "red")
             }
             //console.log(regex.test(input));
         })
     })
+
+    $(function () {
+        $("input#PassporNo").tooltip();
+        $("input#FlightNo").tooltip();
+    });
     //function on submit
     function Proverka() {
-        var pasos = document.getElementById("PassoprNo").value;
-        var pasosRegex = new RegExp("^[A-Z0-9]+$");
-        var let = document.getElementById("FlightNo").value;
-        var letRegex = new RegExp("^[0-9]+$");
-        if (pasosRegex.test(pasos) && pasos.length === 7) {
-            console.log("")
-        }
-        else {
-            alert("Input correct passport number");
-        }
-        if (letRegex.test(let) && let.length === 4) {
-            console.log("")
-        }
-        else {
-            alert("Input correct flight number");
-        }
+        
+            var passportInput = document.getElementById("PassporNo").value;
+            var passportRegex = new RegExp("^[A-Z0-9]+$")
+            var flightInput = document.getElementById("FlightNo").value;
+            var flightRegex = new RegExp("^[0-9]+$")
+            if (passportRegex.test(passportInput) && passportInput.length === 8 && flightRegex.test(flightInput) && input.flightInput === 4) {
+                //console.log("Rabote");
+                return true
+            }
+
+            //else if (!passportRegex.test(passportInput) && passportInput.length !== 8){
+            //    alert("greska passport");
+            //}
+            
+            else {
+                alert("Passport or Flight Number are incorrect")
+                return false
+            }
+
+           
     }
+         
     //populate passenger information fields
     $(document).ready(function () {
         $("input#PassporNo").on("input", function () {
@@ -180,7 +190,7 @@
                 console.log("blabla")
                 $.ajax({
                     //base address/controller/Action
-                    url: '/Patnicis/getPasos/',
+                    url: '/Patnicis/GetPasos/',
                     type: 'GET',
                     data: {
                         //Passing Input parameter
@@ -210,7 +220,7 @@
                 console.log("blabla")
                 $.ajax({
                     //base address/controller/Action
-                    url: '/Patnicis/getFlight/',
+                    url: '/Patnicis/GetFlight/',
                     type: 'GET',
                     data: {
                         //Passing Input parameter
