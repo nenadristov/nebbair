@@ -40,3 +40,6 @@ C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\Patnicis\Edit.cshtml.g.cs
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\Patnicis\Index.cshtml.g.cs
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\Patnicis\GetPasos.cshtml.g.cs
+C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\Properties\serviceDependencies.nebbair - Web Deploy.json
+C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\Properties\ServiceDependencies\nebbair - Web Deploy\mssql1.arm.json
+C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\Properties\ServiceDependencies\nebbair - Web Deploy\profile.arm.json
