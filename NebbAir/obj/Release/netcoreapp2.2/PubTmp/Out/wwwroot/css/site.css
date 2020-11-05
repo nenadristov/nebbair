@@ -65,22 +65,30 @@ body {
     padding-bottom: 3%;
 }
 
+.logo img{
+    width:80%;
+}
+
 .home-page-links{
-    padding-top: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
 }
 
-/*.link-1 h4 {
-    padding-left: 30%;
-    margin-top: 10%;
+.home-page-links a {
     text-decoration: none;
-    
+    color: #353a40;
+    padding-bottom: 3%;
+
 }
 
-.link-2 {
-    text-decoration: none;
-    margin-top: 10%;
-    padding-right: 20%;
-}*/
+
+    .home-page-links a:hover {
+        color: #284c86;
+    }
+
+
+
 
 @media only screen and (max-width: 600px) {
     .logo{

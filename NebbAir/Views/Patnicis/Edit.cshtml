@@ -9,69 +9,97 @@
 <h4>Patnici</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-8">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="PatnikID" />
-            <div class="form-group">
-                <label asp-for="Ime" class="control-label"></label>
-                <input asp-for="Ime" class="form-control" />
-                <span asp-validation-for="Ime" class="text-danger"></span>
+            <h4>Passenger Information:</h4><br />
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label asp-for="Ime" class="control-label">First Name<span style="color: red;"> * </span></label>
+                    <input asp-for="Ime" class="form-control" />
+                    <span asp-validation-for="Ime" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label asp-for="DataNaRagjanje" class="control-label">Birth Date<span style="color: red;"> * </span></label>
+                    <input asp-for="DataNaRagjanje" class="form-control" />
+                    <span asp-validation-for="DataNaRagjanje" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Prezime" class="control-label"></label>
-                <input asp-for="Prezime" class="form-control" />
-                <span asp-validation-for="Prezime" class="text-danger"></span>
+
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label asp-for="Prezime" class="control-label">Last Name<span style="color: red;"> * </span></label>
+                    <input asp-for="Prezime" class="form-control" />
+                    <span asp-validation-for="Prezime" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label asp-for="PassporNo" class="control-label">Passport Number<span style="color: red;"> * </span></label>
+                    <input asp-for="PassporNo" class="form-control" title="Example passport number : A1234567" />
+                    <span asp-validation-for="PassporNo" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="DataNaRagjanje" class="control-label"></label>
-                <input asp-for="DataNaRagjanje" class="form-control" />
-                <span asp-validation-for="DataNaRagjanje" class="text-danger"></span>
+            <hr />
+
+            <h4>Flight Information:</h4>
+            <div class="row">
+                <div class="col-sm-6">
+
+                </div>
+                <div class="form-group col-sm-6">
+                    <label asp-for="FlightNo" class="control-label">Flight Number<span style="color: red;"> * </span></label>
+                    <input asp-for="FlightNo" class="form-control" title="Input four digit flight number" />
+                    <span asp-validation-for="FlightNo" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="PassporNo" class="control-label"></label>
-                <input asp-for="PassporNo" class="form-control" />
-                <span asp-validation-for="PassporNo" class="text-danger"></span>
+
+
+            <div class="row">
+
+                <div class="form-group col-sm-6">
+                    <label asp-for="Origin" class="control-label">Departure<span style="color: red;"> * </span></label>
+                    <input asp-for="Origin" class="form-control" />
+                    <span asp-validation-for="Origin" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label asp-for="Destination" class="control-label">Destination<span style="color: red;"> * </span></label>
+                    <input asp-for="Destination" class="form-control" />
+                    <span asp-validation-for="Destination" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="FlightNo" class="control-label"></label>
-                <input asp-for="FlightNo" class="form-control" />
-                <span asp-validation-for="FlightNo" class="text-danger"></span>
+
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label asp-for="Departure" class="control-label">Departure date<span style="color: red;"> * </span></label>
+                    <input asp-for="Departure" class="form-control" />
+                    <span asp-validation-for="Departure" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label asp-for="Return" class="control-label">Return date<span style="color: red;"> * </span></label>
+                    <input asp-for="Return" class="form-control" />
+                    <span asp-validation-for="Return" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Origin" class="control-label"></label>
-                <input asp-for="Origin" class="form-control" />
-                <span asp-validation-for="Origin" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Destination" class="control-label"></label>
-                <input asp-for="Destination" class="form-control" />
-                <span asp-validation-for="Destination" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Departure" class="control-label"></label>
-                <input asp-for="Departure" class="form-control" />
-                <span asp-validation-for="Departure" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Return" class="control-label"></label>
-                <input asp-for="Return" class="form-control" />
-                <span asp-validation-for="Return" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CarryOn" class="control-label"></label>
-                <input asp-for="CarryOn" class="form-control" />
-                <span asp-validation-for="CarryOn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Trolley" class="control-label"></label>
-                <input asp-for="Trolley" class="form-control" />
-                <span asp-validation-for="Trolley" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CheckIn" class="control-label"></label>
-                <input asp-for="CheckIn" class="form-control" />
-                <span asp-validation-for="CheckIn" class="text-danger"></span>
+            <hr />
+            <h4>Luggage:</h4><br />
+            <div class="row">
+
+                <div class="form-group col-sm-4">
+                    <label asp-for="CarryOn" class="control-label">Carry On</label>
+                    <input asp-for="CarryOn" class="form-control" />
+                    <span asp-validation-for="CarryOn" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label asp-for="Trolley" class="control-label">Trolley </label>
+                    <input asp-for="Trolley" class="form-control" />
+                    <span asp-validation-for="Trolley" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label asp-for="CheckIn" class="control-label">Check-In Bag</label>
+                    <input asp-for="CheckIn" class="form-control" />
+                    <span asp-validation-for="CheckIn" class="text-danger"></span>
+                </div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -95,11 +123,11 @@
             var input = document.getElementById("PassporNo").value;
             var regex = new RegExp("^[A-Z0-9]+$")
             if (regex.test(input) && input.length === 8) {
-                console.log("Rabote");
+                //console.log("Rabote");
                 $("input#PassporNo").css("border-color", "green")
             }
             else {
-                console.log("asd");
+                //console.log("asd");
                 $("input#PassporNo").css("border-color", "red")
             }
             //console.log(regex.test(input));
@@ -111,33 +139,113 @@
             var input = document.getElementById("FlightNo").value;
             var regex = new RegExp("^[0-9]+$")
             if (regex.test(input) && input.length === 4) {
-                console.log("Rabote");
+                //console.log("Rabote");
                 $("input#FlightNo").css("border-color", "green")
             }
             else {
-                console.log("asd");
+                //console.log("asd");
                 $("input#FlightNo").css("border-color", "red")
             }
             //console.log(regex.test(input));
         })
     })
+
+    $(function () {
+        $("input#PassporNo").tooltip();
+        $("input#FlightNo").tooltip();
+    });
     //function on submit
     function Proverka() {
-        var pasos = document.getElementById("PassoprNo").value;
-        var pasosRegex = new RegExp("^[A-Z0-9]+$");
-        var let = document.getElementById("FlightNo").value;
-        var letRegex = new RegExp("^[0-9]+$");
-        if (pasosRegex.test(pasos) && pasos.length === 7) {
-            console.log("")
+
+        var passportInput = document.getElementById("PassporNo").value;
+        var passportRegex = new RegExp("^[A-Z0-9]+$")
+        var flightInput = document.getElementById("FlightNo").value;
+        var flightRegex = new RegExp("^[0-9]+$")
+        if (passportRegex.test(passportInput) && passportInput.length === 8 && flightRegex.test(flightInput) && input.flightInput === 4) {
+            //console.log("Rabote");
+
+            return true
         }
+
         else {
-            alert("Input correct passport number");
+            alert("Passport or Flight Number are incorrect")
+            return false
         }
-        if (letRegex.test(let) && let.length === 4) {
-            console.log("")
-        }
-        else {
-            alert("Input correct flight number");
-        }
+
+
     }
+
+    //populate passenger information fields
+    $(document).ready(function () {
+        $("input#PassporNo").on("input", function () {
+            var input = document.getElementById("PassporNo").value;
+            var regex = new RegExp("^[A-Z0-9]+$")
+            if (regex.test(input) && input.length === 8) {
+
+                //$("input#PassporNo").on("input", function () {
+                //alert("input - " + input)
+                $.ajax({
+                    //base address/controller/Action
+                    url: '/Patnicis/GetPasos/' + input,
+                    type: 'GET',
+
+                    data: null,
+
+                    success: function (result) {
+                        //alert(result.ime);
+                        $("input#Ime").val(result.ime);
+                        $("input#DataNaRagjanje").val(result.dataNaRagjanje);
+                        $("input#Prezime").val(result.prezime);
+
+                    },
+                    error: function (jqXHR, textStatus, errorThrown, data) {
+                        //alert(jqXHR.status);
+                        //alert(textStatus);
+                        //alert(errorThrown);
+
+                    }
+                });
+                return false;
+            }
+        });
+    });
+
+    //populate flight information
+    //populate passenger information fields
+    $(document).ready(function () {
+        $("input#FlightNo").on("input", function () {
+            var input = document.getElementById("FlightNo").value;
+            var regex = new RegExp("^[0-9]+$")
+            if (regex.test(input) && input.length === 4) {
+
+                //$("input#PassporNo").on("input", function () {
+                //$("input#PassporNo").on("input", function () {
+                //alert("input - " + input)
+                $.ajax({
+                    //base address/controller/Action
+                    url: '/Patnicis/GetFlight/' + input,
+                    type: 'GET',
+
+                    data: null,
+
+                    success: function (result) {
+                        //alert(result.ime);
+                        $("input#Origin").val(result.origin);
+                        $("input#Destination").val(result.destination);
+                        $("input#Departure").val(result.departure);
+
+
+
+                    },
+                    error: function (jqXHR, textStatus, errorThrown, data) {
+                        //alert(jqXHR.status);
+                        //alert(textStatus);
+                        //                        alert(errorThrown);
+
+                    }
+                });
+                return false;
+            }
+        });
+    });
 </script>

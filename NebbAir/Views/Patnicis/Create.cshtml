@@ -16,7 +16,7 @@
     <div class="col-md-8">
         <form asp-action="Create" onsubmit=" return Proverka()">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <h4>Passenger Information</h4>
+            <h4>Passenger Information:</h4><br />
             <div class="row">
                 <div class="form-group col-sm-6">
                     <label asp-for="Ime" class="control-label">First Name<span style="color: red;"> * </span></label>
@@ -39,13 +39,13 @@
 
                 <div class="form-group col-sm-6">
                     <label asp-for="PassporNo" class="control-label">Passport Number<span style="color: red;"> * </span></label>
-                    <input asp-for="PassporNo" class="form-control" title="Example passport number : A1234567"/>
+                    <input asp-for="PassporNo" class="form-control" title="Example passport number : A1234567" />
                     <span asp-validation-for="PassporNo" class="text-danger"></span>
                 </div>
             </div>
             <hr />
 
-            <h4>Flight Information</h4>
+            <h4>Flight Information:</h4>
             <div class="row">
                 <div class="col-sm-6">
 
@@ -60,7 +60,7 @@
             <div class="row">
 
                 <div class="form-group col-sm-6">
-                    <label asp-for="Origin" class="control-label">Origin<span style="color: red;"> * </span></label>
+                    <label asp-for="Origin" class="control-label">Departure<span style="color: red;"> * </span></label>
                     <input asp-for="Origin" class="form-control" />
                     <span asp-validation-for="Origin" class="text-danger"></span>
                 </div>
@@ -73,17 +73,19 @@
 
             <div class="row">
                 <div class="form-group col-sm-6">
-                    <label asp-for="Departure" class="control-label">Departure<span style="color: red;"> * </span></label>
+                    <label asp-for="Departure" class="control-label">Departure date<span style="color: red;"> * </span></label>
                     <input asp-for="Departure" class="form-control" />
                     <span asp-validation-for="Departure" class="text-danger"></span>
                 </div>
                 <div class="form-group col-sm-6">
-                    <label asp-for="Return" class="control-label">Return <span style="color: red;"> * </span></label>
+                    <label asp-for="Return" class="control-label">Return date<span style="color: red;"> * </span></label>
                     <input asp-for="Return" class="form-control" />
                     <span asp-validation-for="Return" class="text-danger"></span>
                 </div>
             </div>
+            <hr />
 
+            <h4>Luggage:</h4><br />
             <div class="row">
 
                 <div class="form-group col-sm-4">
@@ -164,13 +166,10 @@
             var flightRegex = new RegExp("^[0-9]+$")
             if (passportRegex.test(passportInput) && passportInput.length === 8 && flightRegex.test(flightInput) && input.flightInput === 4) {
                 //console.log("Rabote");
+
                 return true
             }
-
-            //else if (!passportRegex.test(passportInput) && passportInput.length !== 8){
-            //    alert("greska passport");
-            //}
-            
+        
             else {
                 alert("Passport or Flight Number are incorrect")
                 return false
@@ -180,61 +179,76 @@
     }
          
     //populate passenger information fields
-    //$(document).ready(function () {
-    //    $("input#PassporNo").on("input", function () {
-    //        var input = document.getElementById("PassporNo").value;
-    //        var regex = new RegExp("^[A-Z0-9]+$")
-    //        if (regex.test(input) && input.length === 8) {
+    $(document).ready(function () {
+        $("input#PassporNo").on("input", function () {
+            var input = document.getElementById("PassporNo").value;
+            var regex = new RegExp("^[A-Z0-9]+$")
+            if (regex.test(input) && input.length === 8) {
 
-    //            //$("input#PassporNo").on("input", function () {
-    //            console.log("blabla")
-    //            $.ajax({
-    //                //base address/controller/Action
-    //                url: '/Patnicis/GetPasos/',
-    //                type: 'GET',
-    //                data: {
-    //                    //Passing Input parameter
-    //                    Pasos: $('input#PassporNo').val()
-    //                },
-    //                success: function (result) {
-    //                    console.log("Rabote ajax");
-    //                },
-    //                error: function () {
-    //                    console.log("Ne Rabote ajax")
-    //                }
-    //            });
-    //            return false;
-    //        }
-    //    });
-    //});
+                //$("input#PassporNo").on("input", function () {
+                //alert("input - " + input)
+                $.ajax({
+                    //base address/controller/Action
+                    url: '/Patnicis/GetPasos/' + input,
+                    type: 'GET',
+                    
+                    data: null,
 
-    ////populate flight information
-    ////populate passenger information fields
-    //$(document).ready(function () {
-    //    $("input#FlightNo").on("input", function () {
-    //        var input = document.getElementById("FlightNo").value;
-    //        var regex = new RegExp("^[0-9]+$")
-    //        if (regex.test(input) && input.length === 4) {
+                    success: function (result) {
+                        //alert(result.ime);
+                        $("input#Ime").val(result.ime);
+                        $("input#DataNaRagjanje").val(result.dataNaRagjanje);
+                        $("input#Prezime").val(result.prezime);
 
-    //            //$("input#PassporNo").on("input", function () {
-    //            console.log("blabla")
-    //            $.ajax({
-    //                //base address/controller/Action
-    //                url: '/Patnicis/GetFlight/',
-    //                type: 'GET',
-    //                data: {
-    //                    //Passing Input parameter
-    //                    Pasos: $('input#FlightNo').val()
-    //                },
-    //                success: function (result) {
-    //                    console.log("Rabote ajax");
-    //                },
-    //                error: function () {
-    //                    console.log("Ne Rabote ajax")
-    //                }
-    //            });
-    //            return false;
-    //        }
-    //    });
-    //});
+                    },
+                    error: function (jqXHR, textStatus, errorThrown, data) {
+                        //alert(jqXHR.status);
+                        //alert(textStatus);
+                        //alert(errorThrown);
+                        
+                    }
+                });
+                return false;
+            }
+        });
+    });
+
+    //populate flight information
+    //populate passenger information fields
+    $(document).ready(function () {
+        $("input#FlightNo").on("input", function () {
+            var input = document.getElementById("FlightNo").value;
+            var regex = new RegExp("^[0-9]+$")
+            if (regex.test(input) && input.length === 4) {
+
+                //$("input#PassporNo").on("input", function () {
+                //$("input#PassporNo").on("input", function () {
+                //alert("input - " + input)
+                $.ajax({
+                    //base address/controller/Action
+                    url: '/Patnicis/GetFlight/' + input,
+                    type: 'GET',
+
+                    data: null,
+
+                    success: function (result) {
+                        //alert(result.ime);
+                        $("input#Origin").val(result.origin);
+                        $("input#Destination").val(result.destination);
+                        $("input#Departure").val(result.departure);
+                        
+                        
+
+                    },
+                    error: function (jqXHR, textStatus, errorThrown, data) {
+                        //alert(jqXHR.status);
+                        //alert(textStatus);
+//                        alert(errorThrown);
+
+                    }
+                });
+                return false;
+            }
+        });
+    });
 </script>

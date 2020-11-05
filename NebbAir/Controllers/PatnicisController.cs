@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -150,31 +151,59 @@ namespace NebbAir.Controllers
             return _context.Patnici.Any(e => e.PatnikID == id);
         }
 
-        [Route("GetPasos/{Pasos}")]
-        [HttpGet]
-        public ActionResult GetPasos(string Pasos)
+       
+        [Route("~/Patnicis/GetPasos/{pasos}")]
+        public async  Task<Patnici> GetPasos(string pasos)
         {
-            return View("hello");
+           
+
+            var patnici =await  _context.Patnici
+                .FirstOrDefaultAsync(m => m.PassporNo == pasos);
+
+            return   patnici;
         }
 
-        [Route("GetFlight/{Flight}")]
-        public async Task<IActionResult> GetFLight(string Flight)
+
+        [Route("~/Patnicis/GetFlight/{flightNo}")]
+        public async Task<Patnici> GetFlight(string flightNo)
         {
-            if (Flight == null)
-            {
-                return NotFound();
-            }
+
 
             var patnici = await _context.Patnici
-            .FirstOrDefaultAsync(m => m.FlightNo == Flight);
-            if (patnici == null)
-            {
-                return NotFound();
-            }
+                .FirstOrDefaultAsync(m => m.FlightNo == flightNo);
 
-            return View(patnici);
+            return patnici;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //[HttpGet]
+        //public I GetFlight(string flightNo)
+        //{
+
+
+        //    var patnici = _context.Patnici
+        //        .FirstOrDefaultAsync(m => m.FlightNo == flightNo);
+
+        //    return Json(patnici);
+        //}
     }
 
-        
+    
 }

@@ -43,3 +43,6 @@ C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Release\netcoreapp2.2\NebbAir.dl
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Release\netcoreapp2.2\NebbAir.pdb
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Release\netcoreapp2.2\NebbAir.genruntimeconfig.cache
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Release\netcoreapp2.2\NebbAir.csproj.CopyComplete
+C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Release\netcoreapp2.2\Properties\serviceDependencies.nebbair - Web Deploy1.json
+C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Release\netcoreapp2.2\Properties\ServiceDependencies\nebbair - Web Deploy1\mssql1.arm.json
+C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Release\netcoreapp2.2\Properties\ServiceDependencies\nebbair - Web Deploy1\profile.arm.json

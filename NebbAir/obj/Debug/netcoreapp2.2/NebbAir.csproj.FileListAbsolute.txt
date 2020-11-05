@@ -5,7 +5,6 @@ C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\NebbAir.deps
 C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\NebbAir.runtimeconfig.json
 C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\NebbAir.runtimeconfig.dev.json
 C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\NebbAir.dll
-C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.csprojAssemblyReference.cache
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.AssemblyInfoInputs.cache
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.AssemblyInfo.cs
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.RazorAssemblyInfo.cache
@@ -27,7 +26,6 @@ C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.genr
 C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\NebbAir.pdb
 C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\NebbAir.Views.dll
 C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\NebbAir.Views.pdb
-C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.csproj.CoreCompileInputs.cache
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.Views.pdb
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.dll
 C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.pdb
@@ -43,3 +41,8 @@ C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\Razor\Views\
 C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\Properties\serviceDependencies.nebbair - Web Deploy.json
 C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\Properties\ServiceDependencies\nebbair - Web Deploy\mssql1.arm.json
 C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\Properties\ServiceDependencies\nebbair - Web Deploy\profile.arm.json
+C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.csprojAssemblyReference.cache
+C:\Users\risto\source\repos\NebbAir\NebbAir\obj\Debug\netcoreapp2.2\NebbAir.csproj.CoreCompileInputs.cache
+C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\Properties\serviceDependencies.nebbair - Web Deploy1.json
+C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\Properties\ServiceDependencies\nebbair - Web Deploy1\mssql1.arm.json
+C:\Users\risto\source\repos\NebbAir\NebbAir\bin\Debug\netcoreapp2.2\Properties\ServiceDependencies\nebbair - Web Deploy1\profile.arm.json
